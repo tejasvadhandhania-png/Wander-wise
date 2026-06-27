@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #14B8A6;
+  --color-primary-dark: #0D9488;
+  --color-primary-light: #CCFBF1;
+  --color-navy: #1A1A2E;
+  --color-navy-light: #24243e;
+  --color-navy-dark: #0f0c1b;
+  --color-coral: #FF8E72;
+  --color-coral-dark: #E07A5F;
+  --color-coral-light: #FFEBE5;
+  --font-sans: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* High Density Theme Custom CSS */
+
+/* Global Smooth Transitions and Fine Letter Spacing */
+body {
+  letter-spacing: -0.01em;
+  background-color: #F8F9FA;
+  overflow-x: hidden;
+}
+
+/* Custom Slim High-Density Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A2E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #14B8A6;
+  border-radius: 9999px;
+  border: 1px solid #1A1A2E;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0D9488;
+}
+
+/* Landing Page Hero Glows */
+.bg-travel-gradient {
+  background: linear-gradient(135deg, #1A1A2E 0%, #0D2E2B 100%) !important;
+  position: relative;
+}
+
+.bg-travel-gradient::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, transparent 70%);
+  top: -10%;
+  right: -5%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-travel-gradient::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 142, 114, 0.08) 0%, transparent 70%);
+  bottom: -5%;
+  left: -5%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* High-Density Bento Grids & Dashed App Cards */
+.border-dashed {
+  border-style: dashed !important;
+  border-width: 1.5px !important;
+  border-radius: 16px !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(26, 26, 46, 0.02), 0 4px 12px -2px rgba(26, 26, 46, 0.03);
+}
+
+/* Primary Teal Bento Card */
+.border-primary\/40 {
+  border-color: rgba(20, 184, 166, 0.35) !important;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(20, 184, 166, 0.015) 100%) !important;
+}
+
+.border-primary\/40:hover {
+  border-color: rgba(20, 184, 166, 0.6) !important;
+  box-shadow: 0 12px 24px -8px rgba(20, 184, 166, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+/* Coral Bento Card */
+.border-coral\/40 {
+  border-color: rgba(255, 142, 114, 0.35) !important;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 142, 114, 0.015) 100%) !important;
+}
+
+.border-coral\/40:hover {
+  border-color: rgba(255, 142, 114, 0.6) !important;
+  box-shadow: 0 12px 24px -8px rgba(255, 142, 114, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+/* Neutral Slate Bento Card */
+.border-slate-300 {
+  border-color: rgba(203, 213, 225, 0.7) !important;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(248, 249, 250, 0.6) 100%) !important;
+}
+
+.border-slate-300:hover {
+  border-color: rgba(20, 184, 166, 0.4) !important;
+  box-shadow: 0 12px 24px -8px rgba(26, 26, 46, 0.08) !important;
+  transform: translateY(-2px);
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.glass-nav-scrolled {
+  background: rgba(26, 26, 46, 0.82) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Background mesh lines & patterns */
+.bg-mesh-pattern {
+  background-image: radial-gradient(circle at 10% 20%, rgba(20, 184, 166, 0.08) 0%, transparent 45%),
+                    radial-gradient(circle at 90% 80%, rgba(255, 142, 114, 0.06) 0%, transparent 45%);
+}
+
+/* Interactive elements refinements */
+button, input, select, textarea {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active navigation highlighted states */
+.app-nav-btn.active {
+  background-color: rgba(20, 184, 166, 0.12) !important;
+  color: #14B8A6 !important;
+  border-left: 3px solid #14B8A6;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+
+/* Smooth float / pulse keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(0.99); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+/* High density padding & listing styling */
+.list-item-density {
+  padding: 0.65rem 0.85rem !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(226, 232, 240, 0.6) !important;
+  background-color: #ffffff !important;
+}
+
+.list-item-density:hover {
+  border-color: rgba(20, 184, 166, 0.25) !important;
+  background-color: rgba(20, 184, 166, 0.01) !important;
+  transform: translateX(2px);
+}
